@@ -1,0 +1,62 @@
+======================================================================
+           SMART DATA ANALYST AI AGENT — FULL REPORT
+======================================================================
+  File       : students_messydata (1).csv
+  Generated  : July 24, 2026  22:54:57
+======================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 1: DATASET OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Original shape  : 15 rows × 10 columns
+  Cleaned shape   : 15 rows × 10 columns
+  Rows removed    : 0
+  Missing (before): 0
+  Missing (after) : 0
+
+  Columns:
+    • student_id                     [int64]   nulls: 0
+    • Name                           [str]   nulls: 0
+    • age                            [float64]   nulls: 0
+    • gender                         [str]   nulls: 0
+    • subject                        [str]   nulls: 0
+    • marks                          [int64]   nulls: 0
+    • attendance                     [float64]   nulls: 0
+    • city                           [str]   nulls: 0
+    • grade                          [str]   nulls: 0
+    • contact_no                     [float64]   nulls: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 2: DATA CLEANING STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✅ Stripped whitespace from 6 string columns
+  ✅ Converted 'contact_no' to numeric
+  ✅ Filled 1 missing values in 'contact_no' with median (3124012339.50)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 3: DESCRIPTIVE STATISTICS (CLEANED DATA)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+       student_id   age  marks  attendance    contact_no
+count       15.00  15.0  15.00       15.00  1.500000e+01
+mean       108.00  21.5  67.80       77.23  3.237634e+09
+std          4.47   1.1  20.29       11.32  2.581198e+08
+min        101.00  20.0  35.00       55.00  3.001235e+09
+25%        104.50  21.0  52.50       71.00  3.027284e+09
+50%        108.00  21.5  70.00       78.00  3.124012e+09
+75%        111.50  22.0  85.50       86.75  3.392222e+09
+max        115.00  24.0  95.00       92.50  3.770000e+09
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 4: AUTOMATED INSIGHTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔑 'Name' appears to be a unique identifier (all values distinct)
+  📌 'gender' top category: 'Male' (53.3% of data)
+  📌 'subject' top category: 'Physics' (26.7% of data)
+  📌 'city' top category: 'Karachi' (53.3% of data)
+  📌 'grade' top category: 'F' (33.3% of data)
+  🔗 Strong correlation (0.862) between 'student_id' and 'contact_no'
+  🔗 Strong correlation (0.778) between 'marks' and 'attendance'
+
+======================================================================
+  END OF REPORT — Smart Data Analyst AI Agent
+======================================================================

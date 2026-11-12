@@ -1,0 +1,102 @@
+======================================================================
+           SMART DATA ANALYST AI AGENT — FULL REPORT
+======================================================================
+  File       : HR_Analytics.csv
+  Generated  : June 23, 2026  21:59:39
+======================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 1: DATASET OVERVIEW
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Original shape  : 1480 rows × 38 columns
+  Cleaned shape   : 1167 rows × 38 columns
+  Rows removed    : 313
+  Missing (before): 57
+  Missing (after) : 0
+
+  Columns:
+    • EmpID                          [str]   nulls: 0
+    • Age                            [int64]   nulls: 0
+    • AgeGroup                       [str]   nulls: 0
+    • Attrition                      [str]   nulls: 0
+    • BusinessTravel                 [str]   nulls: 0
+    • DailyRate                      [int64]   nulls: 0
+    • Department                     [str]   nulls: 0
+    • DistanceFromHome               [int64]   nulls: 0
+    • Education                      [int64]   nulls: 0
+    • EducationField                 [str]   nulls: 0
+    • EmployeeCount                  [int64]   nulls: 0
+    • EmployeeNumber                 [int64]   nulls: 0
+    • EnvironmentSatisfaction        [int64]   nulls: 0
+    • Gender                         [str]   nulls: 0
+    • HourlyRate                     [int64]   nulls: 0
+    • JobInvolvement                 [int64]   nulls: 0
+    • JobLevel                       [int64]   nulls: 0
+    • JobRole                        [str]   nulls: 0
+    • JobSatisfaction                [int64]   nulls: 0
+    • MaritalStatus                  [str]   nulls: 0
+    • MonthlyIncome                  [int64]   nulls: 0
+    • SalarySlab                     [str]   nulls: 0
+    • MonthlyRate                    [int64]   nulls: 0
+    • NumCompaniesWorked             [int64]   nulls: 0
+    • Over18                         [str]   nulls: 0
+    • OverTime                       [object]   nulls: 0
+    • PercentSalaryHike              [int64]   nulls: 0
+    • PerformanceRating              [int64]   nulls: 0
+    • RelationshipSatisfaction       [int64]   nulls: 0
+    • StandardHours                  [int64]   nulls: 0
+    • StockOptionLevel               [int64]   nulls: 0
+    • TotalWorkingYears              [int64]   nulls: 0
+    • TrainingTimesLastYear          [int64]   nulls: 0
+    • WorkLifeBalance                [int64]   nulls: 0
+    • YearsAtCompany                 [int64]   nulls: 0
+    • YearsInCurrentRole             [int64]   nulls: 0
+    • YearsSinceLastPromotion        [int64]   nulls: 0
+    • YearsWithCurrManager           [float64]   nulls: 0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 2: DATA CLEANING STEPS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ✅ Removed 7 duplicate rows
+  ✅ Stripped whitespace from 12 string columns
+  ✅ Converted 'OverTime' to datetime
+  ✅ Filled 1473 missing values in 'OverTime' with mode ('Unknown')
+  ✅ Filled 57 missing values in 'YearsWithCurrManager' with median (3.00)
+  ✅ Removed 306 extreme outlier rows (IQR × 3 method)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 3: DESCRIPTIVE STATISTICS (CLEANED DATA)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+           Age  DailyRate  DistanceFromHome  Education  EmployeeCount  EmployeeNumber  EnvironmentSatisfaction  HourlyRate  JobInvolvement  JobLevel  JobSatisfaction  MonthlyIncome  MonthlyRate  NumCompaniesWorked  PercentSalaryHike  PerformanceRating  RelationshipSatisfaction  StandardHours  StockOptionLevel  TotalWorkingYears  TrainingTimesLastYear  WorkLifeBalance  YearsAtCompany  YearsInCurrentRole  YearsSinceLastPromotion  YearsWithCurrManager
+count  1167.00    1167.00           1167.00    1167.00         1167.0         1167.00                  1167.00     1167.00         1167.00   1167.00          1167.00        1167.00      1167.00             1167.00            1167.00             1167.0                   1167.00         1167.0           1167.00            1167.00                 1167.0          1167.00         1167.00             1167.00                  1167.00               1167.00
+mean     36.41     807.86              9.10       2.91            1.0         1040.23                     2.73       65.90            2.75      1.97             2.73        6109.15     14359.07                2.73              14.05                3.0                      2.72           80.0              0.79              10.46                    2.8             2.76            6.04                3.84                     1.56                  3.72
+std       8.97     403.47              7.97       1.01            0.0          598.56                     1.09       20.27            0.71      1.03             1.09        4347.22      7013.36                2.52               2.44                0.0                      1.08            0.0              0.86               7.10                    1.3             0.70            4.75                3.34                     2.10                  3.23
+min      18.00     102.00              1.00       1.00            1.0            1.00                     1.00       30.00            1.00      1.00             1.00        1009.00      2094.00                0.00              11.00                3.0                      1.00           80.0              0.00               0.00                    0.0             1.00            0.00                0.00                     0.00                  0.00
+25%      30.00     469.50              2.00       2.00            1.0          503.50                     2.00       48.00            2.00      1.00             2.00        2887.50      8318.50                1.00              12.00                3.0                      2.00           80.0              0.00               6.00                    2.0             2.00            2.00                2.00                     0.00                  2.00
+50%      35.00     812.00              7.00       3.00            1.0         1043.00                     3.00       66.00            3.00      2.00             3.00        4768.00     14382.00                2.00              14.00                3.0                      3.00           80.0              1.00               9.00                    3.0             3.00            5.00                3.00                     1.00                  3.00
+75%      42.00    1164.50             14.00       4.00            1.0         1571.00                     4.00       84.00            3.00      2.00             4.00        7407.50     20365.00                4.00              16.00                3.0                      4.00           80.0              1.00              14.00                    3.0             3.00            9.00                7.00                     2.00                  7.00
+max      60.00    1498.00             29.00       5.00            1.0         2068.00                     4.00      100.00            4.00      5.00             4.00       19943.00     26999.00                9.00              19.00                3.0                      4.00           80.0              3.00              37.00                    6.0             4.00           26.00               17.00                     8.00                 17.00
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  SECTION 4: AUTOMATED INSIGHTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📊 'MonthlyIncome' is heavily skewed right (positive) (skew=1.55)
+  📊 'YearsSinceLastPromotion' is heavily skewed right (positive) (skew=1.57)
+  📌 'AgeGroup' top category: '26-35' (43.4% of data)
+  📌 'Attrition' top category: 'No' (84.1% of data)
+  📌 'BusinessTravel' top category: 'Travel_Rarely' (71.0% of data)
+  📌 'Department' top category: 'Research & Development' (64.8% of data)
+  📌 'EducationField' top category: 'Life Sciences' (40.7% of data)
+  📌 'Gender' top category: 'Male' (60.3% of data)
+  📌 'JobRole' top category: 'Sales Executive' (22.7% of data)
+  📌 'MaritalStatus' top category: 'Married' (45.4% of data)
+  📌 'SalarySlab' top category: 'Upto 5k' (53.0% of data)
+  ⚠️ 'Over18' has only one unique value — may not be useful for analysis
+  ⚠️ 'OverTime' has only one unique value — may not be useful for analysis
+  🔗 Strong correlation (0.941) between 'JobLevel' and 'MonthlyIncome'
+  🔗 Strong correlation (0.801) between 'YearsAtCompany' and 'YearsInCurrentRole'
+  🔗 Strong correlation (0.785) between 'YearsAtCompany' and 'YearsWithCurrManager'
+
+======================================================================
+  END OF REPORT — Smart Data Analyst AI Agent
+======================================================================
